@@ -1,0 +1,288 @@
+
+:root{
+    /* ===== Colors ===== */
+    /* --body-color: #E4E9F7; */
+    --sidebar-color: #FFF;
+    --primary-color: #fe5a6d;
+    --secondary-color: #d10019;
+    --primary-color-light: #f8f9fa;
+    --primary-color-dark: #212529;
+    --toggle-color: #DDD;
+    --text-color: #FF2400;
+
+
+
+    /* ====== Transition ====== */
+    --tran-03: all 0.2s ease;
+    --tran-03: all 0.3s ease;
+    --tran-04: all 0.3s ease;
+    --tran-05: all 0.3s ease;
+}
+
+#HomeBody{
+  position: relative;
+    background-image:url(../img/lili-kovac-JonGFaeFPgg-unsplash.jpg) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0px -80px;
+    height: 100vh;
+}
+
+#HomeBody .primary-overlay {
+  background: rgba(32, 32, 33, 0.8);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+
+
+#Home{
+    height: 600px;
+}
+
+.navigationBar{
+    width: 90%;
+    margin-top: 30px;
+    height: 70px;
+}
+
+.navigationUl{
+    list-style: none;
+    float: right;
+}
+
+.navLi{
+    display: inline-block;
+    margin-right: 10px; /* add spacing between items */
+}
+
+.navLinks{
+    text-decoration: none;
+    font-size: 25px;
+    color: var(--text-color);
+    font-weight: bolder;
+    font-family: 'Poppins';
+}
+
+.bg-prim{
+  background-color: var(--text-color);
+}
+
+.text-color-prim{
+    color: var(--text-color);
+}
+
+.flexRowCenter{
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.flexRowStart{
+    
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.flexCol{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center; 
+}
+.bg-sec{
+  background-color: #222;
+}
+
+.w50{
+  width: 50%;
+}
+.item{
+  position: relative;
+}
+.item::before{
+  border-left: 1px solid #FF2400;
+  content: '';
+  display: block;
+  height: 100%;
+  left: 7px;
+  opacity: .6;
+  position: absolute;
+  top: 0;
+  width: 1px;}
+
+  .bullet{
+
+    height: 15px;
+    left: -5px;
+    position: absolute;
+    background: #222;
+    top: 20px;
+    width: 15px;
+    border-radius: 50%;
+    border: 2px solid #FF2400;
+  }
+
+  .historyTimeline{
+    width: 10px;
+  border-left: 1px solid #FF2400;
+  height: 210px;
+  }
+.progress2{
+  display: flex;
+  height: 2px;
+  overflow: hidden;
+  line-height: 0;
+  font-size: 0.75rem;
+  background-color: #345;
+  border-radius: 0.25rem;
+}
+.progress2-bar{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  color: darkgray;
+  text-align: center;
+  white-space: nowrap;
+  background-color: #FF2400;
+  transition: width 0.6s ease;
+  height: 2px;
+}
+
+  /* example */
+
+  .timeline {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #222;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    padding: 20px;
+    background: #222;
+    border-left: 4px solid #FF2400;
+    border-radius: 4px;
+}
+
+.timeline-date {
+    font-weight: bold;
+    color: #FF2400;
+    margin-bottom: 8px;
+}
+
+.timeline-content {
+    margin-top: 8px;
+}
+
+.timeline-content h3 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    color: #333;
+}
+
+.timeline-content p {
+    margin: 0;
+    font-size: 14px;
+    color: #666;
+}
+/* end example */
+
+/* About page */
+#aboutMe{
+background-color: #222;
+}
+#about{
+  background-color: #222;
+}
+.description::before{
+  content: "__";
+  color: #FF2400;
+  margin: 10px;
+}
+.description::after{
+  content: "__";
+  color: #FF2400;
+  margin: 10px;
+}
+#boxes{
+  background-color: black;
+}
+
+#showcase {
+    position: relative;
+    background: url("https://marketifythemes.net/wp/istanbul/1/wp-content/uploads/2024/05/bg.jpg");
+    /* background-attachment: ; */
+    min-height: 500px; }
+    #showcase .primary-overlay {
+      background: rgba(32, 32, 33, 0.8);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%; }
+  
+  #users {
+    min-height: 150px; }
+  
+  #accordion a {
+    color: black; }
+  
+  #authors img {
+    margin-top: -50px; }
+  #authors .card:hover {
+    background-color: #3292a6;
+    color: white; }
+
+
+
+/* Portfolio */
+
+#portfolio{
+  background-color: #222;
+}
+
+/* contact */
+
+.contact-form-label{
+  color: var(--text-color);
+}
+
+.contact-form-input{
+  background-color: #464545;
+  border-radius: 30px;
+
+}
+.icon-color{
+  color: var(--text-color);
+}
+  
+  @media (max-width: 768px) {
+    #showcase {
+      min-height: 500px; }
+      #showcase h1 {
+        font-size: 4rem; }
+  
+    .mb-resp {
+      margin-bottom: 1rem; }
+    
+      .w50{
+        width: 80%;
+      }
+    
+    #HomeBody{
+      height: 150vh;
+    }}
+
