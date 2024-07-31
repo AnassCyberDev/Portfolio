@@ -1,38 +1,58 @@
 /* src/components/SandwichMenu.css */
 .menu-container {
-    position: fixed;
-    top: 20px; /* Adjust this value to position the icon vertically */
-    left: 20px; /* Adjust this value to position the icon horizontally */
-    z-index: 1000; /* Ensure it appears above other content */
+  color: antiquewhite;
+  width: 50px;
+  position: fixed;
+  top: 100px;
+  left: 50px;
+  z-index: 1000;
+  border-radius: 50px;
+  /* border: solid 1px rgb(255, 36, 0); */
+  transition: height 1s;
+  background-color: #222;
+  height: 70px;
+  }
+
+ .menu-container.enlarged{
+    height: 330px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+
   }
   
   .sandwich-icon {
     font-size: 30px;
     cursor: pointer;
     padding: 10px;
+    text-align: center;
   }
   
   .menu {
+    width: 20px;
     display: flex;
     flex-direction: column;
     position: absolute;
     top: 50px; /* Adjust this value to position the dropdown correctly */
-    left: -30px;
-    background-color: white;
-    border: 1px solid #ddd;
+    left: 0px;
+    background-color: transparent;
+    color: aliceblue;
     width: 200px; /* Adjust the width as needed */
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+   
   }
   
   .menu a {
     padding: 12px 16px;
     text-decoration: none;
-    color: black;
+    color: white;
     display: block;
     text-align: left;
+    font-weight: lighter;
   }
   
   .menu a:hover {
-    background-color: #ddd;
+    transform: scale(1.1);
+  }
+  .icons{
+    margin-right: 30px;
+    color: gray;
   }
   
