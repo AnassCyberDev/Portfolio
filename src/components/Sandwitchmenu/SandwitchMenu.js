@@ -8,7 +8,7 @@ import { SiBlogger } from "react-icons/si";
 import { IconContext } from 'react-icons';
 import { IoCloseOutline,IoMenu } from "react-icons/io5";
 
-const SandwichMenu = () => {
+const SandwichMenu = ({setPath}) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -53,7 +53,7 @@ const SandwichMenu = () => {
       </div>
         <div className="menu" >
 
-          <Link to={"/"} >
+          <Link to={"/"} onClick={()=>setPath("HOME")}>
             <div className='flexRowStart'>
               <IconContext.Provider
                 value={{ className: "icons" }}
@@ -68,7 +68,7 @@ const SandwichMenu = () => {
             </div>
             </Link>
 
-          <Link to={"/go/Portfolio"}>
+          <Link to={"/go/Portfolio"} onClick={()=>setPath("PORTFOLIO")}>
           <div className='flexRowStart'>
               <IconContext.Provider
                 value={{ className: "icons" }}
@@ -83,7 +83,7 @@ const SandwichMenu = () => {
             </div>
             </Link>
 
-          <Link to={"/go/About"}>
+          <Link to={"/go/About"}  onClick={()=>setPath("ABOUT")}>
           <div className='flexRowStart'>
               <IconContext.Provider
                 value={{ className: "icons" }}
@@ -97,7 +97,7 @@ const SandwichMenu = () => {
               </div>
             </div>
           </Link>
-          <Link to={"/go/Blog"}>
+          <Link to={"/go/Blog"}  onClick={()=>setPath("BLOG")}>
           <div className='flexRowStart'>
               <IconContext.Provider
                 value={{ className: "icons" }}

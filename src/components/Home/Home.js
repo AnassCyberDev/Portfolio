@@ -2,9 +2,12 @@ import React from 'react'
 import '../Styling/css/style.css'
 import '../Styling/css/bootstrap.css'
 import avatar from '../Styling/img/ProfilePhoto.png'
+import { useDispatch } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
 
 
 export const Home = () => {
+    const navigate=useNavigate()
   return (
     <div id="HomeBody">
 <div className="primary-overlay">
@@ -44,9 +47,14 @@ export const Home = () => {
             </div>
             <div className="col-md-6 flexRowCenter">
                 <div className="flexCol w50">
-            <h4 className="text-white">HI THERE</h4>
-            <h2><span className="text-white">I'M</span> <span className="text-color-prim">BENOMAR</span></h2>
-            <p className="text-white mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit eos ex consequuntur accusamus sapiente voluptatibus asperiores nostrum quos harum tempore debitis deleniti soluta odit cupiditate, consectetur accusantium repellat aspernatur voluptatum!</p>
+            <h4 className="text-white" style={{fontWeight:"bolder"}}>HI THERE</h4>
+            <h2><span className="text-white" style={{fontWeight:"bolder"}}>I'M</span> <span className="text-color-prim" style={{fontWeight:"bolder"}}>BENOMAR</span></h2>
+            <p className="text-white mt-3">
+            For me, development is not just a job, but a passion. Each task represents a masterpiece, a challenge, and a part of my identity.</p>
+            <div className='flexRowCenter'>
+                <button className='filledButton' onClick={()=>navigate('/go/Portfolio')}>My Portfolio</button>
+                <button className='transparentButton' onClick={()=>navigate('/go/About')}>About Me</button>
+            </div>
         </div>
             </div>
         </div>

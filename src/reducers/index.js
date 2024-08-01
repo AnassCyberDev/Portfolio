@@ -1,6 +1,9 @@
 import { combineReducers } from "redux";
 import formationsReducer from "./formationsReducer";
+import routeReducer from "./routeReducer";
+
 
 export default combineReducers({
-   formations:formationsReducer
+   formations:formationsReducer,
+   route:routeReducer
 })

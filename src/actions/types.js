@@ -1,1 +1,2 @@
 export const GET_FORMATIONS='GET_FORMATIONS';
+export const GET_ROUTE='GET_ROUTE';

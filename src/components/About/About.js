@@ -4,24 +4,34 @@ import avatar from "../Styling/img/ProfilePhoto.png"
 import { Skill } from './AboutComponents/Skill'
 import { useDispatch } from 'react-redux'
 import { GET_FORMATIONS } from '../../actions/types'
+import { useLocation, useNavigate } from 'react-router-dom'
+import cv from '../Styling/CV/MON_CV_english_scarlet.pdf'
 
-export const About = () => {
-    const[formations,setFormations]=useState([])
-    const dipatch=useDispatch()
+export const About = ({setPath}) => {
+    const location=useLocation()
+    const navigate=useNavigate()
 
+
+
+    const pageName=(link)=>{
+    switch(link){
+        case '/go/Blog':
+          return 'BLOG'
+          break
+        case '/go/About':
+          return "ABOUT"
+          break
+        case '/go/Portfolio':
+          return "PORTFOLIO"
+        case 'Contact':
+          return "CONTACT"
+        case 'Home':
+          return "HOME"
+    }
+    }
+    
     useEffect(()=>{
-        const fetchFormations=async()=>{
-            const request=await fetch('http://localhost:8000/api/formations/')
-            const results=await request.json()
-            console.log(results)
-            setFormations(results)
-            dipatch({
-                type:GET_FORMATIONS,
-                payload:results
-            })
-        }
-
-        fetchFormations()
+    setPath(pageName(location.pathname))
     },[])
 
   return (
@@ -52,22 +62,23 @@ export const About = () => {
         <h1 className="text-color-prim text-center">About ME</h1>
     </div>
     <div className="col-12 text-center text-white">
-        <h4 className="description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h4>
+        <h4 className="description">Lets get you know me better.</h4>
     </div>
     </div>
     <div className="row mt-5">
         <div className="col-md-6 flexRowCenter">
-            <div style={{position: "relative",border: "10px solid #3498db",width: "400px",height: "400px"}}>
+            <div style={{position: "relative",border: "10px solid #FF2400",width: "400px",height: "400px"}}>
                 <img src={avatar}   style={{width: "400px",position: "absolute",top: "-20px",right: "10px"}}/>
             </div>
             
         </div>
         <div className="col-md-6 flexCol text-white">
-            <div className="m-4"><span style={{fontWeight: "bolder",marginRight: "100px"}}>Name         :</span><span style={{color: "#3498db"}}>BENOMAR</span>  </div>
-            <div className="m-4"><span style={{fontWeight: "bolder",marginRight: "100px"}}>Name         :</span><span style={{color: "#3498db"}}>BENOMAR</span>  </div>
-            <div className="m-4"><span style={{fontWeight: "bolder",marginRight: "100px"}}>Name         :</span><span style={{color: "#3498db"}}>BENOMAR</span>  </div>
-            <div className="m-4"><span style={{fontWeight: "bolder",marginRight: "100px"}}>Name         :</span><span style={{color: "#3498db"}}>BENOMAR</span>  </div>
-            <div className="m-4"><span style={{fontWeight: "bolder",marginRight: "100px"}}>Name         :</span><span style={{color: "#3498db"}}>BENOMAR</span>  </div>
+            <div className="m-4"><span style={{fontWeight: "bolder",marginRight: "100px"}}>Firstname         :</span><span style={{color: "#FF2400"}}>ANAS</span>  </div>
+            <div className="m-4"><span style={{fontWeight: "bolder",marginRight: "100px"}}>Lastname         :</span><span style={{color: "#FF2400"}}>BENOMAR</span>  </div>
+            <div className="m-4"><span style={{fontWeight: "bolder",marginRight: "100px"}}>Birthday        :</span><span style={{color: "#FF2400"}}>26/06/1988</span>  </div>
+            <div className="m-4"><span style={{fontWeight: "bolder",marginRight: "100px"}}>Nationality         :</span><span style={{color: "#FF2400"}}>Moroccan</span>  </div>
+            <div className="m-4"><span style={{fontWeight: "bolder",marginRight: "100px"}}>Experience         :</span><span style={{color: "#FF2400"}}>6 Years</span>  </div>
+            <a className='filledButton' href='/static/media/MON_CV_english_scarlet.68ddf9e6963585fc16cd.pdf' target='_blank'>DOWNLOAD MY CV</a>
             
 
         </div>
@@ -84,9 +95,9 @@ export const About = () => {
                      <h1 className="text-color-prim">Experience</h1>
 
                           {/* <!-- 1 Item --> */}
-                    <Experience duration={"2010-2014"} job_name={"Consultant"} company={"Google"} description={"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet diam nonummy."}/>
-                    <Experience duration={"2010-2014"} job_name={"Consultant"} company={"Google"} description={"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet diam nonummy."}/>
-                    <Experience duration={"2010-2014"} job_name={"Consultant"} company={"Google"} description={"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet diam nonummy."}/>
+                    <Experience duration={"2018-2024"} job_name={"Freelancing"} company={"Freelance"} description={"Development and maintenance of web applications using React.js, React Native, Django, and Flask. Design and implementation of database schemas with MySQL and MongoDB. Implementation of cybersecurity measures to ensure the integrity and security of web applications."}/>
+                    <Experience duration={"2021-2022"} job_name={"SOC Analyst"} company={"MRSOC"} description={"Worked with SIEM tools like Wireshark, Splun Enterprise and Snort to monitore the company’s network."}/>
+                    <Experience duration={"2022-2024"} job_name={"Security Manager"} company={"MRSOC"} description={"Contributed in developping the overall security poster by choosing the right tools and implementing the best controls using international frameworks like NIST anad ISO 27000."}/>
          
 
                      
@@ -94,10 +105,10 @@ export const About = () => {
                 <div className="col-md-6" id="education">
                     <h1 className="text-white">Education</h1>
  
-{formations.map((formation,index)=><Experience  duration={formation.duration} job_name={formation.name} company={"Tets"} description={formation.desscription}/>)}
-                    <Experience duration={"2010-2014"} job_name={"Consultant"} company={"Google"} description={"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet diam nonummy."}/>
-                    <Experience duration={"2010-2014"} job_name={"Consultant"} company={"Google"} description={"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet diam nonummy."}/>
-                    <Experience duration={"2010-2014"} job_name={"Consultant"} company={"Google"} description={"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet diam nonummy."}/>
+{/* {formations.map((formation,index)=><Experience  duration={formation.duration} job_name={formation.name} company={"Tets"} description={formation.desscription}/>)} */}
+                    <Experience duration={"2014 - 2017"} job_name={"Software Engeneer"} company={"RABAT"} description={"Institut National des Postes et Télécomunications."}/>
+                    <Experience duration={"2019 - 2021"} job_name={"Master Degree in Cybersecurity"} company={"RABAT"} description={"Institut National des Postes et Télécomunications."}/>
+                    <Experience duration={"2024"} job_name={"Consultant"} company={"Google"} description={"Google CyberSecurity Certification- COURSERA"}/>
 {/* <!-- 1 Item ends --> */}
 
                 </div>

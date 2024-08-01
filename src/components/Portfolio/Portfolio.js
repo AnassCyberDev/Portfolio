@@ -1,6 +1,32 @@
-import React from 'react'
+import React,{useEffect} from 'react'
+import { useNavigate,useLocation } from 'react-router-dom'
 
-export const Portfolio = () => {
+export const Portfolio = ({setPath}) => {
+
+    const location=useLocation()
+
+
+
+const pageName=(link)=>{
+switch(link){
+    case '/go/Blog':
+      return 'BLOG'
+      break
+    case '/go/About':
+      return "ABOUT"
+      break
+    case '/go/Portfolio':
+      return "PORTFOLIO"
+    case 'Contact':
+      return "CONTACT"
+    case 'Home':
+      return "HOME"
+}
+}
+
+useEffect(()=>{
+setPath(pageName(location.pathname))
+},[])
   return (
     <>
      <section id="portfolio" className="py-5">
