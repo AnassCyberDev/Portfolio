@@ -56,4 +56,19 @@
     margin-right: 30px;
     color: gray;
   }
+
+  @media (max-width: 768px) {
+.menu-container{
+  top: 10px;
+  left: 10px;
+}   
+.itemName{
+  display: none;
+}
+.menu a:hover {
+  transform: scale(1);
+}
+}
+
+
   

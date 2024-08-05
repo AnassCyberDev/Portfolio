@@ -47,13 +47,13 @@ useEffect(()=>{
         
             <img src={cyber} alt="link to work" style={{width: "100%",height:200,borderRadius: "10px"}}/>
             <p class="text-white">In today's interconnected world, cybersecurity has become a critical concern for individuals, businesses, and governments alike. As we increasingly rely on digital technologies for communication, commerce, and the storage of sensitive information, the risks associated with cyber threats have grown exponentially. </p>
-            <button class="btn btn-outline-danger" onClick={()=>navigate('/Cybersecurity')}>click for more</button>
+            <button class="transparentButton" onClick={()=>navigate('/Cybersecurity')}>click for more</button>
     </div>
     <div class="col-md-6 p-3 flexCol">
         
             <img src={owasp} alt="link to work" style={{width: "100%",height:200,borderRadius: "10px"}}/>
             <p class="text-white">The Open Web Application Security Project (OWASP) is a globally recognized nonprofit organization dedicated to improving the security of software. Established in 2001, OWASP has become a crucial resource for developers, security professionals, and organizations looking to enhance the security of their web applications.</p>
-            <button class="btn btn-outline-danger" onClick={()=>navigate('/OWASP')}>click for more</button>
+            <button class="transparentButton" onClick={()=>navigate('/OWASP')}>click for more</button>
     </div>
     {/* <div class="col-md-6 p-3 flexCol">
         

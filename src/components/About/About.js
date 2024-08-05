@@ -67,8 +67,8 @@ export const About = ({setPath}) => {
     </div>
     <div className="row mt-5">
         <div className="col-md-6 flexRowCenter">
-            <div style={{position: "relative",border: "10px solid #FF2400",width: "400px",height: "400px"}}>
-                <img src={avatar}   style={{width: "400px",position: "absolute",top: "-20px",right: "10px"}}/>
+            <div className='avatar-container'>
+                <img src={avatar} className='avatar'/>
             </div>
             
         </div>

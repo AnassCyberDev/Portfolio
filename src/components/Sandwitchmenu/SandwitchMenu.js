@@ -62,7 +62,7 @@ const SandwichMenu = ({setPath}) => {
                   <FaHome />
                 </div>
               </IconContext.Provider>
-              <div>
+              <div className='itemName'>
                 Home
               </div>
             </div>
@@ -77,7 +77,7 @@ const SandwichMenu = ({setPath}) => {
                 <FaBriefcase />
                 </div>
               </IconContext.Provider>
-              <div>
+              <div className='itemName'>
               Portfolio
               </div>
             </div>
@@ -92,7 +92,7 @@ const SandwichMenu = ({setPath}) => {
                 <FaUser />
                 </div>
               </IconContext.Provider>
-              <div>
+              <div className='itemName'>
               about
               </div>
             </div>
@@ -106,7 +106,7 @@ const SandwichMenu = ({setPath}) => {
                 <SiBlogger />
                 </div>
               </IconContext.Provider>
-              <div>
+              <div className='itemName'>
               Blogs
               </div>
             </div>
@@ -120,7 +120,7 @@ const SandwichMenu = ({setPath}) => {
                 <HiChatBubbleLeftRight />
                 </div>
               </IconContext.Provider>
-              <div>
+              <div className='itemName'>
               Contact
               </div>
             </div>

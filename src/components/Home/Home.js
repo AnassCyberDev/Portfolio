@@ -38,10 +38,10 @@ export const Home = () => {
        
     </nav> */}
     <section id="Home" className='flexRowCenter'>
-        <div className="row aboutMe"  style={{width: "70%", height: "80%"}}>
+        <div className="row aboutMe" >
             <div className="col-md-6 flexRowCenter">
-                <div style={{position: "relative",border:" 10px solid #FF2400", width: "400px",height: "400px"}}>
-                    <img src={avatar}   style={{width: 400,position: "absolute",top: "-20px",right: "10px"}}/>
+                <div className='avatar-container'>
+                    <img src={avatar}   className='avatar'/>
                 </div>
             
             </div>

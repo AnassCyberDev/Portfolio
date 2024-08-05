@@ -1,8 +1,11 @@
 import React from 'react'
+import { FaUser ,FaPhone ,FaGlobe} from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
+
 
 export const Contact = () => {
   return (
-    <section id="portfolio" className="py-5" style={{height:"100vh"}}>
+    <section id="contact" className="py-5" style={{height:"100vh"}}>
 
     <div className="container">
         <div className="row">
@@ -10,7 +13,7 @@ export const Contact = () => {
                 <h1 className="text-color-prim text-center">Contact Us</h1>
             </div>
             <div className="col-12 text-center text-white">
-                <h4 className="description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h4>
+                <h4 className="description" >If you have any suggestion, project or even you want to say Hello.. please fill out the form below and I will reply you shortly..</h4>
             </div>
             </div>
         <div className="row">
@@ -18,7 +21,7 @@ export const Contact = () => {
        <div className="flexCol mt-4">
         <div className="text-white">Name</div>
         <div className="flexRowCenter mt-2">
-            <div className="icon-color mr-2"><i className="fa-regular fa-user"></i></div>
+            <div className="icon-color mr-2"><FaUser /></div>
             <div className="text-white">ANAS BENOMAR</div>
         </div>
        </div>
@@ -26,7 +29,7 @@ export const Contact = () => {
        <div className="flexCol mt-4">
         <div className="text-white">Email</div>
         <div className="flexRowCenter mt-2 ">
-            <div className="icon-color mr-2"><i className="fa-regular fa-envelope"></i></div>
+            <div className="icon-color mr-2"><MdEmail /></div>
             <div className="text-white">anasscybersec@gmail.com</div>
         </div>
        </div>
@@ -34,7 +37,7 @@ export const Contact = () => {
        <div className="flexCol mt-4">
         <div className="text-white">Phone</div>
         <div className="flexRowCenter mt-2">
-            <div className="icon-color mr-2"><i className="fa-solid fa-phone"></i></div>
+            <div className="icon-color mr-2"><FaPhone /></div>
             <div className="text-white">0611208422</div>
         </div>
        </div>
@@ -42,7 +45,7 @@ export const Contact = () => {
        <div className="flexCol mt-4">
         <div className="text-white">Social Links</div>
         <div className="flexRowCenter mt-2">
-            <div className="icon-color mr-2"><i className="fa-solid fa-globe"></i></div>
+            <div className="icon-color mr-2"><FaGlobe /></div>
             <div className="text-white">info</div>
         </div>
        </div>
@@ -53,7 +56,7 @@ export const Contact = () => {
      </div>
 
      <div className="col-md-8">
-        <h5 className="text-white m-4">If you have any suggestion, project or even you want to say Hello.. please fill out the form below and I will reply you shortly. </h5>
+
         <form style={{width:"90%"}}>
             <div className="mb-3">
                 <label for="exampleFormControlInput1" className="form-label contact-form-label">From</label>
@@ -70,7 +73,7 @@ export const Contact = () => {
               </div>
 
               <div className="mb-3">
-                <button className="btn btn-outline-primary">Submit</button>
+                <button className="filledButton">Submit</button>
               </div>
          </form>
      </div>
