@@ -121,12 +121,12 @@ export const About = ({setPath}) => {
         <div className="container">
             <h1 className="skills text-color-prim">skills</h1>
             <div className="row">
-                <Skill skill={"Python"} value={56}/>
-                <Skill skill={"Django"} value={60}/>
-                <Skill skill={"Django Rest Framework"} value={70}/>
-                <Skill skill={"React js"} value={56}/>
-                <Skill skill={"React native"} value={56}/>
-                <Skill skill={"AWS"} value={20}/>
+                <Skill skill={"Python"} value={90}/>
+                <Skill skill={"Django"} value={90}/>
+                <Skill skill={"Django Rest Framework"} value={85}/>
+                <Skill skill={"React js"} value={80}/>
+                <Skill skill={"React native"} value={70}/>
+                <Skill skill={"AWS"} value={60}/>
                 
             </div>
            
