@@ -56,7 +56,7 @@ setPath(pageName(location.pathname))
         </a>
     </div>
     <div className="col-md-4 p-3">
-        <a target="_blank" href="http://77.37.87.37">
+        <a target="_blank" href="https://mikaza-renov.fr">
             <img src={mikaza} alt="link to work" style={{width: "100%",borderRadius: "10px"}}/>
         </a>
     </div>
