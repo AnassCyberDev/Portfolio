@@ -75,7 +75,7 @@ export const About = ({setPath}) => {
         <div className="col-md-6 flexCol text-white">
             <div className="m-4"><span style={{fontWeight: "bolder",marginRight: "100px"}}>Firstname         :</span><span style={{color: "#FF2400"}}>ANAS</span>  </div>
             <div className="m-4"><span style={{fontWeight: "bolder",marginRight: "100px"}}>Lastname         :</span><span style={{color: "#FF2400"}}>BENOMAR</span>  </div>
-            <div className="m-4"><span style={{fontWeight: "bolder",marginRight: "100px"}}>Birthday        :</span><span style={{color: "#FF2400"}}>26/06/1988</span>  </div>
+            <div className="m-4"><span style={{fontWeight: "bolder",marginRight: "100px"}}>Birthday        :</span><span style={{color: "#FF2400"}}>26/12/1989</span>  </div>
             <div className="m-4"><span style={{fontWeight: "bolder",marginRight: "100px"}}>Nationality         :</span><span style={{color: "#FF2400"}}>Moroccan</span>  </div>
             <div className="m-4"><span style={{fontWeight: "bolder",marginRight: "100px"}}>Experience         :</span><span style={{color: "#FF2400"}}>6 Years</span>  </div>
             <a className='filledButton' href='/static/media/MON_CV_english_scarlet.68ddf9e6963585fc16cd.pdf' target='_blank'>DOWNLOAD MY CV</a>
