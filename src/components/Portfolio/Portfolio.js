@@ -41,7 +41,7 @@ setPath(pageName(location.pathname))
         <h1 className="text-color-prim text-center">Portfolio</h1>
     </div>
     <div className="col-12 text-center text-white">
-        <h4 className="description">Mes Réalisations Récentes</h4>
+        <h4 className="description">My recent Projects</h4>
     </div>
     </div>
     <div className="row mt-5">
