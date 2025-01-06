@@ -56,7 +56,7 @@ setPath(pageName(location.pathname))
         </a>
     </div>
     <div className="col-md-4 p-3">
-        <a target="_blank" href="https://mikaza-renov.fr">
+        <a target="_blank" href="https://mikaza-renov.vercel.app/">
             <img src={mikaza} alt="link to work" style={{width: "100%",borderRadius: "10px"}}/>
         </a>
     </div>
@@ -66,7 +66,7 @@ setPath(pageName(location.pathname))
         </a>
     </div>
     <div className="col-md-4 p-3">
-        <a target="_blank" href="https://matchango-anasscyberdevs-projects.vercel.app/fr/demo">
+        <a target="_blank" href="https://matchango.vercel.app/">
             <img src={machango} alt="link to work" style={{width: "100%",borderRadius: "10px"}}/>
         </a>
     </div>
