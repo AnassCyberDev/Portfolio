@@ -5,6 +5,7 @@ import machango from '../Styling/img/machango.jpeg'
 import mikaza from '../Styling/img/miKaza.jpeg'
 import bfdriveMobile from '../Styling/img/bfdrive_mobile.jpeg'
 import portfolio from "../Styling/img/portfolio.jpeg"
+import toagri from "../Styling/img/toagri.png"
 export const Portfolio = ({setPath}) => {
 
     const location=useLocation()
@@ -68,6 +69,11 @@ setPath(pageName(location.pathname))
     <div className="col-md-4 p-3">
         <a target="_blank" href="https://matchango.vercel.app/">
             <img src={machango} alt="link to work" style={{width: "100%",borderRadius: "10px"}}/>
+        </a>
+    </div>
+    <div className="col-md-4 p-3">
+        <a target="_blank" href="https://d3cipv40mmghiw.cloudfront.net/">
+            <img src={toagri} alt="link to work" style={{width: "100%",borderRadius: "10px"}}/>
         </a>
     </div>
     {/* <div className="col-md-4 p-3">
