@@ -2,7 +2,6 @@ import React from 'react'
 import '../Styling/css/style.css'
 import '../Styling/css/bootstrap.css'
 import avatar from '../Styling/img/ProfilePhoto.png'
-import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 
 
@@ -41,7 +40,7 @@ export const Home = () => {
         <div className="row aboutMe" >
             <div className="col-md-6 flexRowCenter">
                 <div className='avatar-container'>
-                    <img src={avatar}   className='avatar'/>
+                    <img src={avatar} alt="Profile avatar" className='avatar'/>
                 </div>
             
             </div>

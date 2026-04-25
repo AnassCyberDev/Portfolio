@@ -1,4 +1,4 @@
-import { BrowserRouter,Route,Routes, useLocation } from "react-router-dom";
+import { BrowserRouter,Route,Routes } from "react-router-dom";
 import { Home } from "./components/Home/Home";
 import { Provider } from "react-redux";
 import './components/Styling/css/style.css'
@@ -11,34 +11,11 @@ import { Banner } from "./components/Banner/Banner";
 import store from "./store";
 import { OneBlog } from "./components/Blog/OneBlog/OneBlog";
 import { SecondBlog } from "./components/Blog/OneBlog/SecondBlog";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 
 function App() {
-  // const location=useLocation()
   const [path,setPath]=useState('')
-
-
-    const pageName=(link)=>{
-        switch(link){
-            case '/go/Blog':
-              return 'BLOG'
-              break
-            case '/go/About':
-              return "ABOUT"
-              break
-            case '/go/Portfolio':
-              return "PORTFOLIO"
-            case 'Contact':
-              return "CONTACT"
-            case 'Home':
-              return "HOME"
-        }
-    }
-
-  // useEffect(()=>{
-  //   setPath(pageName(location.pathname))
-  // },[])
 
   return (
     <Provider store={store}>

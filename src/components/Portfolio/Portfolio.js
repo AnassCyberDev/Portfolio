@@ -1,5 +1,5 @@
 import React,{useEffect} from 'react'
-import { useNavigate,useLocation } from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
 import bfdrive from '../Styling/img/bfdrive.jpeg'
 import machango from '../Styling/img/machango.jpeg'
 import mikaza from '../Styling/img/miKaza.jpeg'
@@ -16,22 +16,22 @@ const pageName=(link)=>{
 switch(link){
     case '/go/Blog':
       return 'BLOG'
-      break
     case '/go/About':
       return "ABOUT"
-      break
     case '/go/Portfolio':
       return "PORTFOLIO"
     case 'Contact':
       return "CONTACT"
     case 'Home':
       return "HOME"
+    default:
+      return ""
 }
 }
 
 useEffect(()=>{
 setPath(pageName(location.pathname))
-},[])
+},[location.pathname, setPath])
   return (
     <>
      <section id="portfolio" className="py-5">
@@ -47,32 +47,32 @@ setPath(pageName(location.pathname))
     </div>
     <div className="row mt-5">
     <div className="col-md-4 p-3">
-        <a target="_blank" href="https://bfdrive.ma">
+        <a target="_blank" rel="noreferrer" href="https://bfdrive.ma">
             <img src={bfdrive} alt="link to work" style={{width: "100%",borderRadius: "10px"}}/>
         </a>
     </div>
     <div className="col-md-4 p-3">
-        <a target="_blank" href="https://play.google.com/store/apps/details?id=com.bfdrive.mcar">
+        <a target="_blank" rel="noreferrer" href="https://play.google.com/store/apps/details?id=com.bfdrive.mcar">
             <img src={bfdriveMobile} alt="link to work" style={{width: "100%",borderRadius: "10px"}}/>
         </a>
     </div>
     <div className="col-md-4 p-3">
-        <a target="_blank" href="https://mikaza-renov.vercel.app/">
+        <a target="_blank" rel="noreferrer" href="https://mikaza-renov.vercel.app/">
             <img src={mikaza} alt="link to work" style={{width: "100%",borderRadius: "10px"}}/>
         </a>
     </div>
     <div className="col-md-4 p-3">
-        <a target="_blank" href="/">
+        <a target="_blank" rel="noreferrer" href="/">
             <img src={portfolio} alt="link to work" style={{width: "100%",borderRadius: "10px"}}/>
         </a>
     </div>
     <div className="col-md-4 p-3">
-        <a target="_blank" href="https://matchango.vercel.app/">
+        <a target="_blank" rel="noreferrer" href="https://matchango.vercel.app/">
             <img src={machango} alt="link to work" style={{width: "100%",borderRadius: "10px"}}/>
         </a>
     </div>
     <div className="col-md-4 p-3">
-        <a target="_blank" href="https://d3cipv40mmghiw.cloudfront.net/">
+        <a target="_blank" rel="noreferrer" href="https://d3cipv40mmghiw.cloudfront.net/">
             <img src={toagri} alt="link to work" style={{width: "100%",borderRadius: "10px"}}/>
         </a>
     </div>

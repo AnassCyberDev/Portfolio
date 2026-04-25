@@ -6,7 +6,7 @@ const initialState={
 }
 
 
-export default function (state=initialState, action){
+const formationsReducer = (state=initialState, action) => {
     switch(action.type){
         case GET_FORMATIONS:
             return {
@@ -19,3 +19,5 @@ export default function (state=initialState, action){
             return state
     }
 }
+
+export default formationsReducer

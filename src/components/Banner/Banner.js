@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { Link, Outlet } from 'react-router-dom'
-import { useLocation } from 'react-router-dom'
 
 export const Banner = ({path}) => {
 

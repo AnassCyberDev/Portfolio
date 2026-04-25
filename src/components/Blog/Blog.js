@@ -13,47 +13,47 @@ export const Blog = ({setPath}) => {
       switch(link){
           case '/go/Blog':
             return 'BLOG'
-            break
           case '/go/About':
             return "ABOUT"
-            break
           case '/go/Portfolio':
             return "PORTFOLIO"
           case 'Contact':
             return "CONTACT"
           case 'Home':
             return "HOME"
+          default:
+            return ""
       }
   }
 
 useEffect(()=>{
   setPath(pageName(location.pathname))
-},[])
+},[location.pathname, setPath])
   return (
     <>
-     <section id="portfolio" class="py-5">
+     <section id="portfolio" className="py-5">
 
-<div class="container">
-    <div class="row">
-    <div class="col-12">
-        <h1 class="text-color-prim text-center">LATEST POSTS</h1>
+<div className="container">
+    <div className="row">
+    <div className="col-12">
+        <h1 className="text-color-prim text-center">LATEST POSTS</h1>
     </div>
-    <div class="col-12 text-center text-white">
-        <h4 class="description">Here we share some valuable knowledge</h4>
+    <div className="col-12 text-center text-white">
+        <h4 className="description">Here we share some valuable knowledge</h4>
     </div>
     </div>
-    <div class="row mt-5">
-    <div class="col-md-6 p-3 flexCol">
+    <div className="row mt-5">
+    <div className="col-md-6 p-3 flexCol">
         
             <img src={cyber} alt="link to work" style={{width: "100%",height:200,borderRadius: "10px"}}/>
-            <p class="text-white">In today's interconnected world, cybersecurity has become a critical concern for individuals, businesses, and governments alike. As we increasingly rely on digital technologies for communication, commerce, and the storage of sensitive information, the risks associated with cyber threats have grown exponentially. </p>
-            <button class="transparentButton" onClick={()=>navigate('/Cybersecurity')}>click for more</button>
+            <p className="text-white">In today's interconnected world, cybersecurity has become a critical concern for individuals, businesses, and governments alike. As we increasingly rely on digital technologies for communication, commerce, and the storage of sensitive information, the risks associated with cyber threats have grown exponentially. </p>
+            <button className="transparentButton" onClick={()=>navigate('/Cybersecurity')}>click for more</button>
     </div>
-    <div class="col-md-6 p-3 flexCol">
+    <div className="col-md-6 p-3 flexCol">
         
             <img src={owasp} alt="link to work" style={{width: "100%",height:200,borderRadius: "10px"}}/>
-            <p class="text-white">The Open Web Application Security Project (OWASP) is a globally recognized nonprofit organization dedicated to improving the security of software. Established in 2001, OWASP has become a crucial resource for developers, security professionals, and organizations looking to enhance the security of their web applications.</p>
-            <button class="transparentButton" onClick={()=>navigate('/OWASP')}>click for more</button>
+            <p className="text-white">The Open Web Application Security Project (OWASP) is a globally recognized nonprofit organization dedicated to improving the security of software. Established in 2001, OWASP has become a crucial resource for developers, security professionals, and organizations looking to enhance the security of their web applications.</p>
+            <button className="transparentButton" onClick={()=>navigate('/OWASP')}>click for more</button>
     </div>
     {/* <div class="col-md-6 p-3 flexCol">
         

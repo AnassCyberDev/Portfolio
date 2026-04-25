@@ -6,7 +6,7 @@ const initialState={
 }
 
 
-export default function (state=initialState, action){
+const routeReducer = (state=initialState, action) => {
     switch(action.type){
         case GET_ROUTE:
             return {
@@ -19,3 +19,5 @@ export default function (state=initialState, action){
             return state
     }
 }
+
+export default routeReducer

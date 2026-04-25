@@ -1,38 +1,31 @@
-import React,{useState,useEffect} from 'react'
+import React,{useEffect} from 'react'
 import { Experience } from './AboutComponents/Experience'
 import avatar from "../Styling/img/ProfilePhoto.png"
 import { Skill } from './AboutComponents/Skill'
-import { useDispatch } from 'react-redux'
-import { GET_FORMATIONS } from '../../actions/types'
-import { useLocation, useNavigate } from 'react-router-dom'
-import cv from '../Styling/CV/MON_CV_english_scarlet.pdf'
+import { useLocation } from 'react-router-dom'
 
 export const About = ({setPath}) => {
     const location=useLocation()
-    const navigate=useNavigate()
-
-
-
     const pageName=(link)=>{
     switch(link){
         case '/go/Blog':
           return 'BLOG'
-          break
         case '/go/About':
           return "ABOUT"
-          break
         case '/go/Portfolio':
           return "PORTFOLIO"
         case 'Contact':
           return "CONTACT"
         case 'Home':
           return "HOME"
+        default:
+          return ""
     }
     }
     
     useEffect(()=>{
     setPath(pageName(location.pathname))
-    },[])
+    },[location.pathname, setPath])
 
   return (
     <>
@@ -68,7 +61,7 @@ export const About = ({setPath}) => {
     <div className="row mt-5">
         <div className="col-md-6 flexRowCenter">
             <div className='avatar-container'>
-                <img src={avatar} className='avatar'/>
+                <img src={avatar} alt="Profile avatar" className='avatar'/>
             </div>
             
         </div>
@@ -78,7 +71,7 @@ export const About = ({setPath}) => {
             <div className="m-4"><span style={{fontWeight: "bolder",marginRight: "100px"}}>Birthday        :</span><span style={{color: "#FF2400"}}>26/06/1988</span>  </div>
             <div className="m-4"><span style={{fontWeight: "bolder",marginRight: "100px"}}>Nationality         :</span><span style={{color: "#FF2400"}}>Moroccan</span>  </div>
             <div className="m-4"><span style={{fontWeight: "bolder",marginRight: "100px"}}>Experience         :</span><span style={{color: "#FF2400"}}>6 Years</span>  </div>
-            <a className='filledButton' href='/static/media/MON_CV_english_scarlet.68ddf9e6963585fc16cd.pdf' target='_blank'>DOWNLOAD MY CV</a>
+            <a className='filledButton' href='/static/media/MON_CV_english_scarlet.68ddf9e6963585fc16cd.pdf' target='_blank' rel="noreferrer">DOWNLOAD MY CV</a>
             
 
         </div>

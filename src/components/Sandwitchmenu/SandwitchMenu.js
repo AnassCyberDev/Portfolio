@@ -9,12 +9,6 @@ import { IconContext } from 'react-icons';
 import { IoCloseOutline,IoMenu } from "react-icons/io5";
 
 const SandwichMenu = ({setPath}) => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
-
   const [isEnlarged, setIsEnlarged] = useState(false);
 
   const toggleSize = () => {
